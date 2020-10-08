@@ -2,7 +2,9 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/',(req,res)=>{
-    res.send("sneding abck the router response");
+    res.render('/',(req,res)=>{
+        console.log("Rerouting to the /users home page");
+    });
 })
 
 module.exports = router;
